@@ -15,18 +15,18 @@
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://santecerta.com/">
+    <meta property="og:url" content="https://sante-certa.fr/">
     <meta property="og:title" content="Santé Certa - Global Health Records for International Living">
     <meta property="og:description" content="Your global health record that moves with you. Privacy-first health data vault for expats, digital nomads, and medical tourists.">
-    <meta property="og:image" content="https://santecerta.com/og-image.jpg">
+    <meta property="og:image" content="https://sante-certa.fr/og-image.jpg">
     <meta property="og:site_name" content="Santé Certa">
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://santecerta.com/">
+    <meta property="twitter:url" content="https://sante-certa.fr/">
     <meta property="twitter:title" content="Santé Certa - Global Health Records for International Living">
     <meta property="twitter:description" content="Your global health record that moves with you. Privacy-first health data vault for expats, digital nomads, and medical tourists.">
-    <meta property="twitter:image" content="https://santecerta.com/og-image.jpg">
+    <meta property="twitter:image" content="https://sante-certa.fr/og-image.jpg">
     
     <!-- Schema.org Markup -->
     <script type="application/ld+json">
@@ -46,8 +46,8 @@
       "provider": {
         "@type": "Organization",
         "name": "Santé Certa",
-        "url": "https://santecerta.com",
-        "logo": "https://santecerta.com/logo.png",
+        "url": "https://sante-certa.fr",
+        "logo": "https://sante-certa.fr/logo.png",
         "foundingDate": "2025",
         "foundingLocation": {
           "@type": "Place",
@@ -69,7 +69,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://santecerta.com/">
+    <link rel="canonical" href="https://sante-certa.fr/">
     
     <style>
         * {
@@ -163,7 +163,7 @@
             text-align: center;
         }
 
-        .hero h1 {
+        .hero h2 {
             font-size: 3rem;
             font-weight: 700;
             margin-bottom: 20px;
@@ -261,6 +261,9 @@
         .process-step {
             text-align: center;
             max-width: 200px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         .process-icon {
@@ -272,15 +275,31 @@
             align-items: center;
             justify-content: center;
             font-size: 2rem;
+            color: white;
+            font-weight: 300;
         }
 
         .step-1 .process-icon { background: #1A1E1A; color: white; }
         .step-2 .process-icon { background: #6f8A5E; color: white; }
         .step-3 .process-icon { background: #a7bc8f; color: #1A1E1A; }
 
+        .process-step h3 {
+            font-size: 1.1rem;
+            color: #1A1E1A;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .process-step p {
+            font-size: 0.95rem;
+            color: #446547;
+            line-height: 1.4;
+        }
+
         .arrow {
             font-size: 2rem;
             color: #a7bc8f;
+            font-weight: 300;
         }
 
         /* Who We Help */
@@ -315,6 +334,8 @@
         .target-group .icon {
             font-size: 3rem;
             margin-bottom: 20px;
+            color: #1A1E1A;
+            font-weight: 300;
         }
 
         .target-group h3 {
@@ -343,9 +364,43 @@
             line-height: 1.8;
         }
 
-        .france-flag {
-            display: inline-block;
-            margin: 0 10px;
+        .credentials-section {
+            margin: 40px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .credential-item {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .credential-logo {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            min-height: 60px;
+            min-width: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .credential-logo img {
+            max-width: 80px;
+            height: auto;
+            max-height: 50px;
+        }
+
+        .credential-item small {
+            font-size: 0.9rem;
+            opacity: 0.9;
         }
 
         /* Founder Section */
@@ -450,6 +505,7 @@
             transform: translateY(-2px);
             box-shadow: 0 8px 25px rgba(111, 138, 94, 0.3);
         }
+
         /* Footer CTA */
         .footer-cta {
             background: #1A1E1A;
@@ -487,13 +543,14 @@
 
         /* Responsive */
         @media (max-width: 768px) {
-            .hero h1 { font-size: 2rem; }
+            .hero h2 { font-size: 2rem; }
             .hero .subtitle { font-size: 1.1rem; }
             .problem h2, .solution h2, .secret-sauce h2, .founder h2 { font-size: 2rem; }
             .process { flex-direction: column; gap: 20px; }
             .arrow { display: none; }
             .target-groups { grid-template-columns: 1fr; }
             .credentials { flex-direction: column; align-items: center; }
+            .credentials-section { flex-direction: column; gap: 20px; }
             
             .logo-section {
                 text-align: center;
@@ -622,36 +679,24 @@
             <h2>Built on France's Leadership in Privacy and Health Innovation</h2>
             <p>Globally viewed as a humanist, neutral, trusted jurisdiction — ideal for cross-border data trust. Positioned at the heart of EU regulation (Data Act, AI Act, EHDS), with government support for digital sovereignty. Home of Mon Espace Santé, a working, national-scale, citizen-controlled health data vault.</p>
             
-            <div style="margin: 40px 0; display: flex; justify-content: center; align-items: center; gap: 30px; flex-wrap: wrap;">
-                <div style="text-align: center;">
-                    <div style="background: white; padding: 15px; border-radius: 8px; margin-bottom: 10px; min-height: 60px; display: flex; align-items: center; justify-content: center;">
-                        <img src="/cnil-logo.png" alt="CNIL - Commission Nationale Informatique & Libertés" style="max-width: 80px; height: auto;">
+            <div class="credentials-section">
+                <div class="credential-item">
+                    <div class="credential-logo">
+                        <img src="/cnil-logo.png" alt="CNIL - Commission Nationale Informatique & Libertés">
                     </div>
                     <small>GDPR Authority</small>
                 </div>
-                <div style="text-align: center;">
-                    <div style="background: white; padding: 15px; border-radius: 8px; margin-bottom: 10px; min-height: 60px; display: flex; align-items: center; justify-content: center;">
-                        <img src="/french-tech-logo.png" alt="La French Tech Aix-Marseille Région Sud" style="max-width: 80px; height: auto;">
+                <div class="credential-item">
+                    <div class="credential-logo">
+                        <img src="/la-french-tech-logo.png" alt="La French Tech Aix-Marseille Région Sud">
                     </div>
                     <small>French Tech Member</small>
                 </div>
-                <div style="text-align: center;">
-                    <div style="background: white; padding: 15px; border-radius: 8px; margin-bottom: 10px; min-height: 60px; display: flex; align-items: center; justify-content: center;">
-                        <img src="/mon-espace-sante-logo.png" alt="Mon Espace Santé - France's National Health Data Platform" style="max-width: 80px; height: auto;">
+                <div class="credential-item">
+                    <div class="credential-logo">
+                        <img src="/mon-espace-sante-logo.png" alt="Mon Espace Santé - France's National Health Data Platform">
                     </div>
                     <small>Health Innovation Leader</small>
-                </div>
-                <div style="text-align: center;">
-                    <div style="background: white; padding: 15px; border-radius: 8px; margin-bottom: 10px; min-height: 60px; display: flex; align-items: center; justify-content: center;">
-                        <span style="font-size: 1.5rem; color: #1A1E1A;">🇪🇺</span>
-                    </div>
-                    <small>EU-Based</small>
-                </div>
-                <div style="text-align: center;">
-                    <div style="background: white; padding: 15px; border-radius: 8px; margin-bottom: 10px; min-height: 60px; display: flex; align-items: center; justify-content: center;">
-                        <span style="font-size: 1.5rem; color: #1A1E1A;">🌍</span>
-                    </div>
-                    <small>Global Data Choice</small>
                 </div>
             </div>
             
