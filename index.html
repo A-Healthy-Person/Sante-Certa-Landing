@@ -690,4 +690,59 @@
         </div>
     </section>
 </body>
+<!-- === SANTÉ CERTA HEADER (self-contained) === -->
+<style>
+  /* Namespaced so it won't clash with your site */
+  .sc-container{max-width:1200px;margin:0 auto;padding:0 20px}
+  .sc-header{
+    position:fixed;top:0;left:0;right:0;z-index:1000;
+    background:rgba(248,252,244,.95);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid rgba(167,188,143,.2);
+  }
+  .sc-header nav{display:flex;justify-content:space-between;align-items:center;padding:1rem 0}
+  .sc-logo{display:flex;align-items:center;gap:.8rem;text-decoration:none}
+  .sc-logo-icon{width:40px;height:40px;position:relative;display:flex;align-items:center;justify-content:center}
+  .sc-logo-icon::before{
+    content:"";position:absolute;width:28px;height:28px;
+    border:2.5px solid #a7bc8f;border-radius:6px;transform:rotate(45deg)
+  }
+  .sc-logo-icon::after{
+    content:"";position:absolute;width:16px;height:16px;
+    background:linear-gradient(135deg,#6f8a5e,#a7bc8f);
+    border-radius:3px;z-index:1
+  }
+  .sc-logo-text{display:flex;flex-direction:column;line-height:1}
+  .sc-logo-main{font-weight:700;color:#1a1e1a;font-size:1.2rem}
+  .sc-logo-sub{font-size:.65rem;font-weight:500;color:#6f8a5e;text-transform:uppercase;letter-spacing:1px;margin-top:2px}
+  .sc-nav-links{display:flex;gap:2rem;list-style:none;margin:0;padding:0}
+  .sc-nav-links a{text-decoration:none;color:#2b2c30;font-weight:500;transition:color .2s ease}
+  .sc-nav-links a:hover{color:#446547}
+
+  /* Keep content from hiding under fixed header */
+  body{scroll-padding-top:80px;}
+
+  /* Mobile: hide links (adjust if you add a hamburger) */
+  @media (max-width:768px){ .sc-nav-links{display:none} }
+</style>
+
+<header class="sc-header">
+  <nav class="sc-container">
+    <a href="/" class="sc-logo" aria-label="Santé Certa home">
+      <span class="sc-logo-icon" aria-hidden="true"></span>
+      <span class="sc-logo-text">
+        <span class="sc-logo-main">Santé Certa</span>
+        <span class="sc-logo-sub">Global Health Record</span>
+      </span>
+    </a>
+    <ul class="sc-nav-links">
+      <li><a href="/#use-cases">Who We Serve</a></li>
+      <li><a href="/#features">Features</a></li>
+      <li><a href="/#blog">Health is Wealth</a></li>
+      <li><a href="/#early-access">Early Access</a></li>
+    </ul>
+  </nav>
+</header>
+<!-- === /SANTÉ CERTA HEADER === -->
+
 </html>
