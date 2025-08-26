@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary SEO Meta Tags -->
+    <title>Santé Certa - Global Health Records for International Living | Private Health Vault</title>
+    <meta name="title" content="Santé Certa - Global Health Records for International Living | Private Health Vault">
+    <meta name="description" content="Your global health record that moves with you. Privacy-first health data vault for expats, digital nomads, and medical tourists. Built in France with GDPR compliance.">
+    <meta name="keywords" content="global health records, expat medical records, international health data, health tourism records, cross-border healthcare, private health vault, digital nomad health, medical tourism, GDPR health data, France health tech">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="author" content="Santé Certa">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://santecerta.com/">
+    <meta property="og:title" content="Santé Certa - Global Health Records for International Living">
+    <meta property="og:description" content="Your global health record that moves with you. Privacy-first health data vault for expats, digital nomads, and medical tourists.">
+    <meta property="og:image" content="https://santecerta.com/og-image.jpg">
+    <meta property="og:site_name" content="Santé Certa">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://santecerta.com/">
+    <meta property="twitter:title" content="Santé Certa - Global Health Records for International Living">
+    <meta property="twitter:description" content="Your global health record that moves with you. Privacy-first health data vault for expats, digital nomads, and medical tourists.">
+    <meta property="twitter:image" content="https://santecerta.com/og-image.jpg">
+    
+    <!-- Schema.org Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Santé Certa",
+      "description": "Global health record management platform for international living",
+      "applicationCategory": "HealthApplication",
+      "operatingSystem": "Web Browser",
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "EUR",
+        "price": "500",
+        "priceValidUntil": "2025-12-31"
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "Santé Certa",
+        "url": "https://santecerta.com",
+        "logo": "https://santecerta.com/logo.png",
+        "foundingDate": "2025",
+        "foundingLocation": {
+          "@type": "Place",
+          "name": "Marseille, France"
+        },
+        "sameAs": [
+          "https://www.sante-certa.com"
+        ]
+      }
+    }
+    </script>
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" as="style">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://santecerta.com/">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #fafafa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .header {
+            background: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 400;
+            color: #1A1E1A;
+            letter-spacing: 1px;
+            font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        .logo::before {
+            content: "◉";
+            color: #6f8A5E;
+            margin-right: 8px;
+            font-size: 1.2rem;
+        }
+
+        .tagline {
+            font-size: 0.85rem;
+            color: #446547;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+            margin: 0;
+        }
+
+        .cta-button {
+            background: linear-gradient(135deg, #6f8A5E 0%, #446547 100%);
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(111, 138, 94, 0.3);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #6f8A5E 0%, #446547 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .hero .subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Problem Section */
+        .problem {
+            background: #1A1E1A;
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .problem h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+
+        .problem p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            line-height: 1.8;
+        }
+
+        .harm-list {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .harm-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+            font-size: 1.1rem;
+        }
+
+        .harm-number {
+            background: #6f8A5E;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            margin-right: 20px;
+            flex-shrink: 0;
+            font-size: 0.9rem;
+        }
+
+        /* Solution Section */
+        .solution {
+            background: #f8fcf4;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .solution h2 {
+            font-size: 2.5rem;
+            color: #1A1E1A;
+            margin-bottom: 30px;
+        }
+
+        .solution p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 50px;
+            line-height: 1.8;
+            color: #446547;
+        }
+
+        /* Process Diagram */
+        .process {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            margin: 50px 0;
+            flex-wrap: wrap;
+        }
+
+        .process-step {
+            text-align: center;
+            max-width: 200px;
+        }
+
+        .process-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 15px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+        }
+
+        .step-1 .process-icon { background: #1A1E1A; color: white; }
+        .step-2 .process-icon { background: #6f8A5E; color: white; }
+        .step-3 .process-icon { background: #a7bc8f; color: #1A1E1A; }
+
+        .arrow {
+            font-size: 2rem;
+            color: #a7bc8f;
+        }
+
+        /* Who We Help */
+        .who-we-help {
+            background: #edf4e8;
+            padding: 80px 0;
+        }
+
+        .who-we-help h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #1A1E1A;
+            margin-bottom: 50px;
+        }
+
+        .target-groups {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .target-group {
+            background: #f8fcf4;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(26, 30, 26, 0.1);
+            text-align: center;
+            border: 1px solid #e8f2a7;
+        }
+
+        .target-group .icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .target-group h3 {
+            font-size: 1.3rem;
+            color: #1A1E1A;
+            margin-bottom: 15px;
+        }
+
+        /* Secret Sauce */
+        .secret-sauce {
+            background: linear-gradient(135deg, #446547 0%, #6f8A5E 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .secret-sauce h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+
+        .secret-sauce p {
+            font-size: 1.2rem;
+            max-width: 900px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        .france-flag {
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        /* Founder Section */
+        .founder {
+            background: #f8fcf4;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .founder h2 {
+            font-size: 2.5rem;
+            color: #1A1E1A;
+            margin-bottom: 50px;
+        }
+
+        .founder-card {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #efeee7;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(26, 30, 26, 0.1);
+            border: 1px solid #e8f2a7;
+        }
+
+        .founder-card p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin-bottom: 30px;
+            color: #446547;
+        }
+
+        .credentials {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .credential {
+            background: #a7bc8f;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-weight: 600;
+            color: #1A1E1A;
+            border: 2px solid #6f8A5E;
+        }
+
+        /* Contact Form */
+        .contact-form {
+            max-width: 500px;
+            margin: 0 auto;
+            background: rgba(255,255,255,0.1);
+            padding: 30px;
+            border-radius: 12px;
+            margin-top: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background: linear-gradient(135deg, #6f8A5E 0%, #a7bc8f 100%);
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            font-family: 'Montserrat', sans-serif;
+            transition: all 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(111, 138, 94, 0.3);
+        }
+        /* Footer CTA */
+        .footer-cta {
+            background: #1A1E1A;
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .footer-cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+
+        .footer-cta p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+        }
+
+        .cta-large {
+            background: linear-gradient(135deg, #6f8A5E 0%, #a7bc8f 100%);
+            color: white;
+            padding: 18px 36px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .cta-large:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(111, 138, 94, 0.4);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .hero .subtitle { font-size: 1.1rem; }
+            .problem h2, .solution h2, .secret-sauce h2, .founder h2 { font-size: 2rem; }
+            .process { flex-direction: column; gap: 20px; }
+            .arrow { display: none; }
+            .target-groups { grid-template-columns: 1fr; }
+            .credentials { flex-direction: column; align-items: center; }
+            
+            .logo-section {
+                text-align: center;
+                margin-bottom: 15px;
+            }
+            
+            .header .container {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo-section">
+                <h1 class="logo">Santé Certa</h1>
+                <p class="tagline">Your Global Health Record — Unified, Secure, Owned By You</p>
+            </div>
+            <a href="#contact" class="cta-button" aria-label="Get started with Santé Certa">Get Started</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h2>What if your health record was yours — everywhere, forever?</h2>
+            <p class="subtitle">A lifetime vault for health data that moves with you, not against you. Everyone deserves a complete, portable, private health record for the age of AI and global care.</p>
+            <a href="#contact" class="cta-large" aria-label="Start your global health record">Start Your Global Health Record</a>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="problem">
+        <div class="container">
+            <h2>Global Health Data is Broken</h2>
+            <p><strong>Health data doesn't travel. People do.</strong> No global system exists for people to access or manage their lifetime health records. National platforms stop at the border — or don't exist at all. In the U.S., patients face hundreds of disconnected systems with no control.</p>
+            
+            <div class="harm-list">
+                <div class="harm-item">
+                    <div class="harm-number">01</div>
+                    <div>Expats and travelers risk misdiagnosis when records don't follow them</div>
+                </div>
+                <div class="harm-item">
+                    <div class="harm-number">02</div>
+                    <div>Emergency care is delayed when doctors can't access critical information</div>
+                </div>
+                <div class="harm-item">
+                    <div class="harm-number">03</div>
+                    <div>Cross-border caregivers struggle to manage elderly parents' care effectively</div>
+                </div>
+                <div class="harm-item">
+                    <div class="harm-number">04</div>
+                    <div>Patients are forced to repeat tests, recount histories, and receive conflicting treatment</div>
+                </div>
+                <div class="harm-item">
+                    <div class="harm-number">05</div>
+                    <div>Health tourism is growing, but international providers lack trusted, verified medical records — increasing delays and liability</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="solution">
+        <div class="container">
+            <h2>Zero-Knowledge Health Data Vault</h2>
+            <p>Santé Certa uses zero-knowledge encryption to create your personal private global health record. Connect health records from across US states, EU countries, and health tourism destinations. Built with cryptographic data provenance and AI-ready architecture — your comprehensive health data remains completely private under your sole ownership.</p>
+            
+            <div class="process">
+                <div class="process-step step-1">
+                    <div class="process-icon">⊞</div>
+                    <h3>Scattered Records</h3>
+                    <p>Medical records across different countries and systems</p>
+                </div>
+                <div class="arrow">→</div>
+                <div class="process-step step-2">
+                    <div class="process-icon">⚿</div>
+                    <h3>Private Vault</h3>
+                    <p>Your personal, secure consolidation</p>
+                </div>
+                <div class="arrow">→</div>
+                <div class="process-step step-3">
+                    <div class="process-icon">◉</div>
+                    <h3>Your Private Data</h3>
+                    <p>Complete personal control and access</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who We Help -->
+    <section class="who-we-help">
+        <div class="container">
+            <h2>People Whose Lives Don't Fit Inside One Healthcare System</h2>
+            <div class="target-groups">
+                <div class="target-group">
+                    <div class="icon">✈</div>
+                    <h3>Expats & Digital Nomads</h3>
+                    <p>Lives that span multiple countries need health records that do too. No more starting from scratch with every move.</p>
+                </div>
+                <div class="target-group">
+                    <div class="icon">■</div>
+                    <h3>Cross-Border Caregivers</h3>
+                    <p>Managing elderly parents' care across borders requires coordination. Keep all family health data unified and accessible.</p>
+                </div>
+                <div class="target-group">
+                    <div class="icon">◊</div>
+                    <h3>Medical Tourists</h3>
+                    <p>International procedures require trusted, verified medical histories. Reduce delays and liability with complete records.</p>
+                </div>
+                <div class="target-group">
+                    <div class="icon">▲</div>
+                    <h3>Privacy-First Consumers</h3>
+                    <p>Your health data should be yours, not a corporate asset. Take back control with sovereign data ownership.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Secret Sauce -->
+    <section class="secret-sauce">
+        <div class="container">
+            <h2>Built on France's Leadership in Privacy and Health Innovation</h2>
+            <p>Globally viewed as a humanist, neutral, trusted jurisdiction — ideal for cross-border data trust. Positioned at the heart of EU regulation (Data Act, AI Act, EHDS), with government support for digital sovereignty. Home of Mon Espace Santé, a working, national-scale, citizen-controlled health data vault.</p>
+            
+            <div style="margin: 40px 0; display: flex; justify-content: center; align-items: center; gap: 30px; flex-wrap: wrap;">
+                <div style="text-align: center;">
+                    <div style="background: white; padding: 15px; border-radius: 8px; margin-bottom: 10px; min-height: 60px; display: flex; align-items: center; justify-content: center;">
+                        <img src="/cnil-logo.png" alt="CNIL - Commission Nationale Informatique & Libertés" style="max-width: 80px; height: auto;">
+                    </div>
+                    <small>GDPR Authority</small>
+                </div>
+                <div style="text-align: center;">
+                    <div style="background: white; padding: 15px; border-radius: 8px; margin-bottom: 10px; min-height: 60px; display: flex; align-items: center; justify-content: center;">
+                        <img src="/french-tech-logo.png" alt="La French Tech Aix-Marseille Région Sud" style="max-width: 80px; height: auto;">
+                    </div>
+                    <small>French Tech Member</small>
+                </div>
+                <div style="text-align: center;">
+                    <div style="background: white; padding: 15px; border-radius: 8px; margin-bottom: 10px; min-height: 60px; display: flex; align-items: center; justify-content: center;">
+                        <img src="/mon-espace-sante-logo.png" alt="Mon Espace Santé - France's National Health Data Platform" style="max-width: 80px; height: auto;">
+                    </div>
+                    <small>Health Innovation Leader</small>
+                </div>
+                <div style="text-align: center;">
+                    <div style="background: white; padding: 15px; border-radius: 8px; margin-bottom: 10px; min-height: 60px; display: flex; align-items: center; justify-content: center;">
+                        <span style="font-size: 1.5rem; color: #1A1E1A;">🇪🇺</span>
+                    </div>
+                    <small>EU-Based</small>
+                </div>
+                <div style="text-align: center;">
+                    <div style="background: white; padding: 15px; border-radius: 8px; margin-bottom: 10px; min-height: 60px; display: flex; align-items: center; justify-content: center;">
+                        <span style="font-size: 1.5rem; color: #1A1E1A;">🌍</span>
+                    </div>
+                    <small>Global Data Choice</small>
+                </div>
+            </div>
+            
+            <p style="margin-top: 30px;"><strong>Choose where your data vault is housed:</strong> EU data centers for GDPR compliance, US sovereign cloud options, or other jurisdictions based on your preferences. Your data, your choice of location.</p>
+            
+            <p style="margin-top: 20px; font-style: italic;">"Information technology must serve citizens" — CNIL</p>
+        </div>
+    </section>
+
+    <!-- Founder Section -->
+    <section class="founder">
+        <div class="container">
+            <h2>Founded by Experience</h2>
+            <div class="founder-card">
+                <div class="credentials">
+                    <div class="credential">MIT MBA</div>
+                    <div class="credential">30 Years Tech Experience</div>
+                    <div class="credential">France Talent Visa</div>
+                </div>
+                <p>With an MBA from MIT and 30 years of experience in information technology and cybersecurity (CISSP), our founder brings deep expertise across three major healthcare systems: United States, Canada, and France. Personal investment and France Talent Entrepreneur Visa demonstrate total commitment to solving this critical problem for global citizens.</p>
+                <p><strong>Currently seeking seed investors, co-founders, and strategic collaborators in France</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer CTA -->
+    <section class="footer-cta" id="contact">
+        <div class="container">
+            <h2>Ready to Connect?</h2>
+            <p>Whether you need global health records, want to invest, or explore partnerships</p>
+            
+            <form class="contact-form" netlify name="contact" method="POST">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required aria-describedby="name-help">
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required aria-describedby="email-help">
+                </div>
+                
+                <div class="form-group">
+                    <label for="interest">I'm interested in</label>
+                    <select id="interest" name="interest" required aria-describedby="interest-help">
+                        <option value="">Select your interest</option>
+                        <option value="personal">Personal global health records</option>
+                        <option value="family">Family health record management</option>
+                        <option value="expat">Expat/international living support</option>
+                        <option value="medical-tourism">Medical tourism assistance</option>
+                        <option value="enterprise">Business/enterprise solutions</option>
+                        <option value="investment">Investment opportunities</option>
+                        <option value="partnership">Strategic partnerships</option>
+                        <option value="collaboration">Technical collaboration</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Tell us how we can help you or how you'd like to get involved..." required aria-describedby="message-help"></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+</body>
+</html>
