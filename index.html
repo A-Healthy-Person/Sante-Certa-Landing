@@ -118,6 +118,35 @@
       background:linear-gradient(135deg,#6f8A5E 0%,#a7bc8f 100%);color:#fff;padding:15px 30px;border:none;border-radius:8px;font-size:1.1rem;font-weight:600;cursor:pointer;width:100%;font-family:'Montserrat',sans-serif;transition:all .3s ease
     }
     .submit-btn:hover{transform:translateY(-2px);box-shadow:0 8px 25px rgba(111,138,94,.3)}
+    /* CTA button */
+.cta-large {
+  display: inline-block;
+  background: linear-gradient(135deg, #7ea873 0%, #c9dab3 100%); /* lighter green */
+  color: #fff;
+  padding: 18px 36px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+/* keep text from turning purple in any state */
+.cta-large,
+.cta-large:link,
+.cta-large:visited,
+.cta-large:hover,
+.cta-large:active,
+.cta-large:focus {
+  color: #fff;
+}
+
+.cta-large:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(111, 138, 94, 0.4);
+}
+
 
     /* Make policy links never purple & accessible on dark bg */
     .contact-form a,
