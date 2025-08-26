@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Santé Certa - Global Health Records for International Living</title>
+  <meta name="description" content="Your global health record that moves with you. Privacy-first health data vault for expats, digital nomads, and medical tourists. Built in France with GDPR compliance.">
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* Santé Certa Header Integration */
+    .sc-container{max-width:1200px;margin:0 auto;padding:0 20px}
+    .sc-header{
+      position:fixed;top:0;left:0;right:0;z-index:1000;
+      background:rgba(248,252,244,.95);
+      backdrop-filter:blur(10px);
+      border-bottom:1px solid rgba(167,188,143,.2);
+    }
+    .sc-header nav{display:flex;justify-content:space-between;align-items:center;padding:1rem 0}
+    .sc-logo{display:flex;align-items:center;gap:.8rem;text-decoration:none}
+    .sc-logo-icon{width:40px;height:40px;position:relative;display:flex;align-items:center;justify-content:center}
+    .sc-logo-icon::before{
+      content:"";position:absolute;width:28px;height:28px;
+      border:2.5px solid #a7bc8f;border-radius:6px;transform:rotate(45deg)
+    }
+    .sc-logo-icon::after{
+      content:"";position:absolute;width:16px;height:16px;
+      background:linear-gradient(135deg,#6f8a5e,#a7bc8f);
+      border-radius:3px;z-index:1
+    }
+    .sc-logo-text{display:flex;flex-direction:column;line-height:1}
+    .sc-logo-main{font-weight:700;color:#1a1e1a;font-size:1.2rem}
+    .sc-logo-sub{font-size:.65rem;font-weight:500;color:#6f8a5e;text-transform:uppercase;letter-spacing:1px;margin-top:2px}
+    .sc-nav-links{display:flex;gap:2rem;list-style:none;margin:0;padding:0}
+    .sc-nav-links a{text-decoration:none;color:#2b2c30;font-weight:500;transition:color .2s ease}
+    .sc-nav-links a:hover{color:#446547}
+
+    /* Adjust body padding for fixed header */
+    body{scroll-padding-top:80px;padding-top:80px;}
+
+    /* Mobile responsive */
+    @media (max-width:768px){
+      .sc-nav-links{display:none}
+      body{padding-top:70px;}
+    }
+
+    /* Base */
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:'Montserrat',sans-serif;line-height:1.6;color:#333;background:#fafafa}
+    .container{max-width:1200px;margin:0 auto;padding:0 20px}
+
+    /* Hero */
+    .hero{background:linear-gradient(135deg,#6f8A5E 0%,#446547 100%);color:#fff;padding:120px 0 80px;text-align:center}
+    .hero h1{font-size:3rem;font-weight:700;margin-bottom:20px}
+    .hero .subtitle{font-size:1.3rem;margin-bottom:40px;opacity:.9;max-width:800px;margin-left:auto;margin-right:auto}
+
+    /* Problem */
+    .problem{background:#1A1E1A;color:#fff;padding:80px 0;text-align:center}
+    .problem h2{font-size:2.5rem;margin-bottom:30px}
+    .problem p{font-size:1.2rem;max-width:800px;margin:0 auto 40px;line-height:1.8}
+    .harm-list{max-width:900px;margin:0 auto;text-align:left}
+    .harm-item{display:flex;align-items:flex-start;margin-bottom:25px;font-size:1.1rem}
+    .harm-number{background:#6f8A5E;color:#fff;width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:600;margin-right:20px;flex-shrink:0;font-size:.9rem}
+
+    /* Solution */
+    .solution{background:#f8fcf4;padding:80px 0;text-align:center}
+    .solution h2{font-size:2.5rem;color:#1A1E1A;margin-bottom:30px}
+    .solution p{font-size:1.2rem;max-width:800px;margin:0 auto 50px;line-height:1.8;color:#446547}
+    .process{display:flex;justify-content:center;align-items:center;gap:40px;margin:50px 0;flex-wrap:wrap}
+    .process-step{text-align:center;max-width:200px;display:flex;flex-direction:column;align-items:center}
+    .process-icon{width:80px;height:80px;margin:0 auto 15px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:2rem;color:#fff}
+    .step-1 .process-icon{background:#1A1E1A}
+    .step-2 .process-icon{background:#6f8A5E}
+    .step-3 .process-icon{background:#a7bc8f;color:#1A1E1A}
+    .process-step h3{font-size:1.1rem;color:#1A1E1A;margin-bottom:10px;font-weight:600}
+    .process-step p{font-size:.95rem;color:#446547;line-height:1.4}
+    .arrow{font-size:2rem;color:#a7bc8f}
+
+    /* Who We Help */
+    .who-we-help{background:#edf4e8;padding:80px 0}
+    .who-we-help h2{text-align:center;font-size:2.5rem;color:#1A1E1A;margin-bottom:50px}
+    .target-groups{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px;margin-top:50px}
+    .target-group{background:#f8fcf4;padding:30px;border-radius:12px;box-shadow:0 4px 15px rgba(26,30,26,.1);text-align:center;border:1px solid #e8f2a7}
+    .target-group .icon{font-size:3rem;margin-bottom:20px;color:#1A1E1A}
+    .target-group h3{font-size:1.3rem;color:#1A1E1A;margin-bottom:15px}
+
+    /* France Section */
+    .france-section{background:linear-gradient(135deg,#446547 0%,#6f8A5E 100%);color:#fff;padding:80px 0;text-align:center}
+    .france-section h2{font-size:2.5rem;margin-bottom:30px}
+    .france-section p{font-size:1.2rem;max-width:900px;margin:0 auto;line-height:1.8}
+    .credentials-section{margin:40px 0;display:flex;justify-content:center;align-items:center;gap:40px;flex-wrap:wrap}
+    .credential-item{text-align:center;display:flex;flex-direction:column;align-items:center}
+    .credential-logo{background:#fff;padding:15px;border-radius:8px;margin-bottom:10px;min-height:60px;min-width:100px;display:flex;align-items:center;justify-content:center}
+    .credential-logo img{max-width:80px;height:auto;max-height:50px}
+    .credential-item small{font-size:.9rem;opacity:.9}
+
+    /* Founder */
+    .founder{background:#f8fcf4;padding:80px 0;text-align:center}
+    .founder h2{font-size:2.5rem;color:#1A1E1A;margin-bottom:50px}
+    .founder-card{max-width:600px;margin:0 auto;background:#efeee7;padding:40px;border-radius:12px;box-shadow:0 4px 15px rgba(26,30,26,.1);border:1px solid #e8f2a7}
+    .founder-card p{font-size:1.1rem;line-height:1.7;margin-bottom:30px;color:#446547}
+    .credentials{display:flex;justify-content:center;gap:30px;margin-bottom:30px;flex-wrap:wrap}
+    .credential{background:#a7bc8f;padding:10px 20px;border-radius:20px;font-weight:600;color:#1A1E1A;border:2px solid #6f8A5E}
+
+    /* Contact */
+    .contact{background:#1A1E1A;color:#fff;padding:60px 0;text-align:center}
+    .contact h2{font-size:2.5rem;margin-bottom:30px}
+    .contact p{font-size:1.2rem;margin-bottom:40px}
+    .contact-form{max-width:500px;margin:0 auto;background:rgba(255,255,255,.1);padding:30px;border-radius:12px}
+    .form-group{margin-bottom:20px;text-align:left}
+    .form-group label{display:block;margin-bottom:5px;font-weight:600}
+    .form-group input,.form-group select,.form-group textarea{
+      width:100%;padding:12px;border:none;border-radius:6px;font-size:1rem;font-family:'Montserrat',sans-serif
+    }
+    .form-group textarea{height:120px;resize:vertical}
+    .submit-btn{
+      background:linear-gradient(135deg,#6f8A5E 0%,#a7bc8f 100%);color:#fff;padding:15px 30px;border:none;border-radius:8px;font-size:1.1rem;font-weight:600;cursor:pointer;width:100%;font-family:'Montserrat',sans-serif;transition:all .3s ease
+    }
+    .submit-btn:hover{transform:translateY(-2px);box-shadow:0 8px 25px rgba(111,138,94,.3)}
+
+    /* Make policy links never purple & accessible on dark bg */
+    .contact-form a,
+    .contact-form a:visited { color:#e8f2a7; text-decoration:underline; }
+    .contact-form a:hover { text-decoration:none; }
+
+    /* Mobile */
+    @media (max-width:768px){
+      .hero h1{font-size:2rem}
+      .hero .subtitle{font-size:1.1rem}
+      .problem h2,.solution h2,.france-section h2,.founder h2{font-size:2rem}
+      .process{flex-direction:column;gap:20px}
+      .arrow{display:none}
+      .target-groups{grid-template-columns:1fr}
+      .credentials{flex-direction:column;align-items:center}
+      .credentials-section{flex-direction:column;gap:20px}
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="sc-header">
+    <nav class="sc-container">
+      <a href="/" class="sc-logo" aria-label="Santé Certa home">
+        <span class="sc-logo-icon" aria-hidden="true"></span>
+        <span class="sc-logo-text">
+          <span class="sc-logo-main">Santé Certa</span>
+          <span class="sc-logo-sub">Your Personal Private Global Health Record</span>
+        </span>
+      </a>
+      <ul class="sc-nav-links">
+        <li><a href="#solution">Solution</a></li>
+        <li><a href="#who-we-help">Who We Serve</a></li>
+        <li><a href="#france-section">Privacy First</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h1>What if your health record was yours — everywhere, forever?</h1>
+      <p class="subtitle">A lifetime vault for health data that moves with you, not against you. Everyone deserves a complete, portable, private health record for the age of AI and global care.</p>
+      <a href="#contact" class="cta-large">Start Your Global Health Record</a>
+    </div>
+  </section>
+
+  <section class="problem">
+    <div class="container">
+      <h2>Global Health Data is Broken</h2>
+      <p><strong>Health data doesn't travel. People do.</strong> No global system exists for people to access or manage their lifetime health records. National platforms stop at the border — or don't exist at all. In the U.S., patients face hundreds of disconnected systems with no control.</p>
+
+      <div class="harm-list">
+        <div class="harm-item"><div class="harm-number">01</div><div>Expats and travelers risk misdiagnosis when records don't follow them</div></div>
+        <div class="harm-item"><div class="harm-number">02</div><div>Emergency care is delayed when doctors can't access critical information</div></div>
+        <div class="harm-item"><div class="harm-number">03</div><div>Cross-border caregivers struggle to manage elderly parents' care effectively</div></div>
+        <div class="harm-item"><div class="harm-number">04</div><div>Patients are forced to repeat tests, recount histories, and receive conflicting treatment</div></div>
+        <div class="harm-item"><div class="harm-number">05</div><div>Health tourism is growing, but international providers lack trusted, verified medical records — increasing delays and liability</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="solution" id="solution">
+    <div class="container">
+      <h2>Zero-Knowledge Health Data Vault</h2>
+      <p>Santé Certa uses zero-knowledge encryption to create your personal private global health record. Connect health records from across US states, EU countries, and health tourism destinations. Built with cryptographic data provenance and AI-ready architecture — your comprehensive health data remains completely private under your sole ownership.</p>
+
+      <div class="process">
+        <div class="process-step step-1">
+          <div class="process-icon">⊞</div>
+          <h3>Scattered Records</h3>
+          <p>Medical records across different countries and systems</p>
+        </div>
+        <div class="arrow">→</div>
+        <div class="process-step step-2">
+          <div class="process-icon">⚿</div>
+          <h3>Private Vault</h3>
+          <p>Your personal, secure consolidation</p>
+        </div>
+        <div class="arrow">→</div>
+        <div class="process-step step-3">
+          <div class="process-icon">◉</div>
+          <h3>Your Private Data</h3>
+          <p>Complete personal control and access</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="who-we-help" id="who-we-help">
+    <div class="container">
+      <h2>People Whose Lives Don't Fit Inside One Healthcare System</h2>
+      <div class="target-groups">
+        <div class="target-group">
+          <div class="icon">✈</div>
+          <h3>Expats & Digital Nomads</h3>
+          <p>Lives that span multiple countries need health records that do too. No more starting from scratch with every move.</p>
+        </div>
+        <div class="target-group">
+          <div class="icon">■</div>
+          <h3>Cross-Border Caregivers</h3>
+          <p>Managing elderly parents' care across borders requires coordination. Keep all family health data unified and accessible.</p>
+        </div>
+        <div class="target-group">
+          <div class="icon">◊</div>
+          <h3>Medical Tourists</h3>
+          <p>International procedures require trusted, verified medical histories. Reduce delays and liability with complete records.</p>
+        </div>
+        <div class="target-group">
+          <div class="icon">▲</div>
+          <h3>Privacy-First Consumers</h3>
+          <p>Your health data should be yours, not a corporate asset. Take back control with sovereign data ownership.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="france-section" id="france-section">
+    <div class="container">
+      <h2>Built on France's Leadership in Privacy and Health Innovation</h2>
+      <p>Globally viewed as a humanist, neutral, trusted jurisdiction — ideal for cross-border data trust. Positioned at the heart of EU regulation (Data Act, AI Act, EHDS), with government support for digital sovereignty. Home of Mon Espace Santé, a working, national-scale, citizen-controlled health data vault.</p>
+
+      <div class="credentials-section">
+        <div class="credential-item">
+          <div class="credential-logo"><img src="/cnil-logo.png" alt="CNIL - Commission Nationale Informatique & Libertés"></div>
+          <small>GDPR Authority</small>
+        </div>
+        <div class="credential-item">
+          <div class="credential-logo"><img src="/la-french-tech-logo.png" alt="La French Tech Aix-Marseille Région Sud"></div>
+          <small>French Tech Member</small>
+        </div>
+        <div class="credential-item">
+          <div class="credential-logo"><img src="/mon-espace-sante-logo.png" alt="Mon Espace Santé - France's National Health Data Platform"></div>
+          <small>Health Innovation Leader</small>
+        </div>
+      </div>
+
+      <p style="margin-top:30px;"><strong>Choose where your data vault is housed:</strong> EU data centers for GDPR compliance, US sovereign cloud options, or other jurisdictions based on your preferences. Your data, your choice of location.</p>
+      <p style="margin-top:20px;font-style:italic;">"Information technology must serve citizens" — CNIL</p>
+    </div>
+  </section>
+
+  <section class="founder">
+    <div class="container">
+      <h2>Founded by Experience</h2>
+      <div class="founder-card">
+        <div class="credentials">
+          <div class="credential">MIT MBA</div>
+          <div class="credential">30 Years Tech Experience</div>
+          <div class="credential">France Talent Visa</div>
+        </div>
+        <p>With an MBA from MIT and 30 years of experience in information technology and cybersecurity (CISSP), our founder brings deep expertise across three major healthcare systems: United States, Canada, and France. Personal investment and France Talent Entrepreneur Visa demonstrate total commitment to solving this critical problem for global citizens.</p>
+        <p><strong>Currently seeking seed investors, co-founders, and strategic collaborators in France</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="container">
+      <h2>Ready to Connect?</h2>
+      <p>Whether you need global health records, want to invest, or explore partnerships</p>
+
+      <form class="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you.html">
+        <input type="hidden" name="form-name" value="contact">
+        <p style="display:none">
+          <label>Don't fill this out: <input name="bot-field"></label>
+        </p>
+
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input autocomplete="name" type="text" id="name" name="name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input autocomplete="email" type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="interest">I'm interested in</label>
+          <select id="interest" name="interest" required>
+            <option value="">Select your interest</option>
+            <option value="personal">Personal global health records</option>
+            <option value="family">Family health record management</option>
+            <option value="expat">Expat/international living support</option>
+            <option value="medical-tourism">Medical tourism assistance</option>
+            <option value="enterprise">Business/enterprise solutions</option>
+            <option value="investment">Investment opportunities</option>
+            <option value="partnership">Strategic partnerships</option>
+            <option value="collaboration">Technical collaboration</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <!-- Message: optional, limited length -->
+        <div class="form-group">
+          <label for="message">Message <span style="opacity:.7">(optional, max 400 chars)</span></label>
+          <textarea id="message" name="message" placeholder="Tell us briefly how we can help (no links or emails, please)" maxlength="400"></textarea>
+        </div>
+
+        <!-- Community Guidelines consent -->
+        <div class="form-group">
+          <label style="display:flex;gap:.6rem;align-items:flex-start;">
+            <input type="checkbox" id="guidelines" name="guidelines" required>
+            <span>I agree to the
+              <a class="policy-link" href="/community-guidelines.html" target="_blank" rel="noopener">Community Guidelines</a>
+              and understand submissions are moderated.
+            </span>
+          </label>
+        </div>
+
+        <!-- Netlify reCAPTCHA -->
+        <div class="form-group">
+          <div data-netlify-recaptcha="true"></div>
+        </div>
+
+        <button type="submit" class="submit-btn">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <script>
+    // Light client-side abuse guard for the message field:
+    // Block links, email addresses, and common URL patterns.
+    (function () {
+      var msg = document.getElementById('message');
+      if (!msg) return;
+      function check(val){
+        return /(https?:\/\/|www\.)|@/i.test(val);
+      }
+      msg.addEventListener('input', function(e){
+        var blocked = check(e.target.value);
+        e.target.setCustomValidity(blocked ? 'Please don’t include links, email addresses, or personal identifiers.' : '');
+      });
+      // Ensure constraint reported on submit if needed
+      var form = msg.closest('form');
+      if (form) {
+        form.addEventListener('submit', function(){
+          if (check(msg.value)) { msg.reportValidity(); }
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
