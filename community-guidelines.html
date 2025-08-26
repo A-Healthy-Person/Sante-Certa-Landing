@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Santé Certa — Community Guidelines</title>
+  <meta name="description" content="Community Guidelines for respectful, purpose-driven contact with Santé Certa."/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* Base */
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      font-family:'Montserrat',sans-serif;line-height:1.7;color:#1a1e1a;background:#fafafa;
+      scroll-padding-top:80px;padding-top:80px;
+    }
+    a,a:link,a:visited{color:#446547;text-decoration:underline} /* never purple */
+    a:hover{text-decoration:none}
+
+    /* Container */
+    .sc-container{max-width:1200px;margin:0 auto;padding:0 20px}
+
+    /* Header (same look as main site) */
+    .sc-header{
+      position:fixed;top:0;left:0;right:0;z-index:1000;
+      background:rgba(248,252,244,.95);backdrop-filter:blur(10px);
+      border-bottom:1px solid rgba(167,188,143,.2);
+    }
+    .sc-header nav{display:flex;justify-content:space-between;align-items:center;padding:1rem 0}
+    .sc-logo{display:flex;align-items:center;gap:.8rem;text-decoration:none}
+    .sc-logo-icon{width:40px;height:40px;position:relative;display:flex;align-items:center;justify-content:center}
+    .sc-logo-icon::before{content:"";position:absolute;width:28px;height:28px;border:2.5px solid #a7bc8f;border-radius:6px;transform:rotate(45deg)}
+    .sc-logo-icon::after{content:"";position:absolute;width:16px;height:16px;background:linear-gradient(135deg,#6f8a5e,#a7bc8f);border-radius:3px;z-index:1}
+    .sc-logo-text{display:flex;flex-direction:column;line-height:1}
+    .sc-logo-main{font-weight:700;color:#1a1e1a;font-size:1.2rem}
+    .sc-logo-sub{font-size:.65rem;font-weight:500;color:#6f8a5e;text-transform:uppercase;letter-spacing:1px;margin-top:2px}
+    .sc-nav-links{display:flex;gap:2rem;list-style:none}
+    .sc-nav-links a{text-decoration:none;color:#2b2c30;font-weight:500;transition:color .2s}
+    .sc-nav-links a:hover{color:#446547}
+    @media (max-width:768px){ .sc-nav-links{display:none} body{padding-top:70px} }
+
+    /* Page header */
+    .page-hero{
+      background:linear-gradient(135deg,#6f8A5E 0%, #446547 100%);color:#fff;text-align:center;padding:90px 0 60px;
+    }
+    .page-hero h1{font-size:2.4rem;margin-bottom:12px}
+    .page-hero p{opacity:.95;max-width:820px;margin:0 auto}
+
+    /* Content card */
+    .guidelines{padding:50px 0}
+    .card{
+      background:#fff;border:1px solid #e8f2a7;border-radius:12px;
+      box-shadow:0 6px 24px rgba(26,30,26,.08);
+      padding:32px;max-width:900px;margin:0 auto;
+    }
+    .card h2{font-size:1.4rem;margin:24px 0 12px}
+    .card p{margin:0 0 14px}
+    .card ul{margin:8px 0 18px 1.2rem}
+    .card li{margin:8px 0}
+    .muted{opacity:.8}
+    .footer-line{margin-top:18px;font-size:.95rem}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+    .btn{
+      display:inline-block;background:linear-gradient(135deg,#7ea873 0%, #c9dab3 100%);
+      color:#fff;padding:12px 20px;border-radius:8px;text-decoration:none;font-weight:600;transition:transform .2s, box-shadow .2s
+    }
+    .btn:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(111,138,94,.28)}
+    .btn-secondary{background:#efeee7;color:#1a1e1a;border:1px solid #e8f2a7}
+    .last-updated{margin-top:6px;font-size:.9rem;opacity:.75}
+
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="sc-header">
+    <nav class="sc-container">
+      <a href="/" class="sc-logo" aria-label="Santé Certa home">
+        <span class="sc-logo-icon" aria-hidden="true"></span>
+        <span class="sc-logo-text">
+          <span class="sc-logo-main">Santé Certa</span>
+          <span class="sc-logo-sub">Your Personal Private Global Health Record</span>
+        </span>
+      </a>
+      <ul class="sc-nav-links">
+        <li><a href="/#solution">Solution</a></li>
+        <li><a href="/#who-we-help">Who We Serve</a></li>
+        <li><a href="/#france-section">Privacy First</a></li>
+        <li><a href="/#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Page hero -->
+  <section class="page-hero">
+    <div class="sc-container">
+      <h1>Community Guidelines</h1>
+      <p>We built Santé Certa for respectful, purpose-driven contact. Submissions are moderated.</p>
+    </div>
+  </section>
+
+  <!-- Content -->
+  <section class="guidelines">
+    <div class="sc-container">
+      <div class="card">
+        <p class="muted">By using this site, you agree to the guidelines below.</p>
+
+        <h2>What’s not allowed</h2>
+        <ul>
+          <li><strong>Harassment or intimidation</strong> — including persistent or unwanted contact.</li>
+          <li><strong>Stalking or surveillance behaviors</strong> — attempts to track, locate, or monitor any person.</li>
+          <li><strong>Impersonation or misrepresentation</strong> — pretending to be someone else or speaking on their behalf.</li>
+          <li><strong>Doxxing or privacy violations</strong> — sharing personal identifiers, medical details of others, or confidential information.</li>
+          <li><strong>Sexual, violent, or hateful content</strong>, or anything meant to threaten or degrade.</li>
+          <li><strong>Circumventing safety measures</strong> — including filters, rate limits, or moderation.</li>
+        </ul>
+
+        <h2>Use of the contact form</h2>
+        <ul>
+          <li>Keep messages brief and relevant to collaboration, product, or support.</li>
+          <li>Don’t include links, emails, phone numbers, or files; off-platform contact requests may be ignored.</li>
+          <li>Avoid posting anyone else’s personal or medical information.</li>
+        </ul>
+
+        <h2>Moderation & consequences</h2>
+        <ul>
+          <li>We may decline, delete, or ignore submissions at our discretion.</li>
+          <li>Serious or repeat misuse may result in permanent blocking and, if warranted, referral to the appropriate authorities.</li>
+          <li>We minimize data collection, but we may retain limited security logs to protect the service.</li>
+        </ul>
+
+        <p class="footer-line muted">If you or someone else is in immediate danger, contact local emergency services.</p>
+        <p class="last-updated">Last updated: 26 August 2025</p>
+
+        <div class="actions">
+          <a class="btn" href="/#contact">Back to Contact</a>
+          <a class="btn btn-secondary" href="/">Home</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
