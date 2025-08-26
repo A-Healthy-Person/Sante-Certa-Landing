@@ -267,15 +267,22 @@
               </div>
             </div>
 
-            <!-- Authenticity / anti-harassment attestations -->
-            <div class="form-group" style="grid-column:1/-1;">
-              <label>Authenticity checks *</label>
-              <div style="display:grid;grid-template-columns:1fr;gap:.4rem;">
-                <label><input type="checkbox" name="attest_real_identity" value="yes" required /> I am using my real identity and contact information.</label>
-                <label><input type="checkbox" name="attest_no_harassment" value="yes" required /> I have not engaged in harassment, impersonation, or doxxing of the founder or company.</label>
-                <label><input type="checkbox" name="attest_terms" value="yes" required /> I agree to respectful conduct and understand abuse will be reported and blocked.</label>
-              </div>
-            </div>
+<!-- Community guidelines (replaces the old "Authenticity checks") -->
+<div class="form-group" style="grid-column: 1 / -1;">
+  <label>Participation agreement *</label>
+  <div style="display: grid; grid-template-columns: 1fr; gap: .4rem;">
+    <label>
+      <input type="checkbox" name="real_contact" value="yes" required />
+      I confirm this is my real contact information.
+    </label>
+    <label>
+      <input type="checkbox" name="guidelines_ok" value="yes" required />
+      I agree to the
+      <a href="/community-guidelines.html" target="_blank" rel="noopener">Community Guidelines</a>.
+    </label>
+  </div>
+</div>
+
 
             <!-- Discovery -->
             <div class="form-group" style="margin-top:.25rem;">
